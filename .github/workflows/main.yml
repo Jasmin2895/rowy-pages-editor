@@ -9,9 +9,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Print modified files
-        run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
       - name: Trigger Webhook
         run: >
           curl -X POST -H "Content-Type: application/json" -d '{"event":
