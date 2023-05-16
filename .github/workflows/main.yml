@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - '**.js'
 jobs:
   observe_file_changes:
     runs-on: ubuntu-latest
