@@ -1,10 +1,10 @@
 name: Observe Changes in Web Page.
-'on':
+on:
   push:
     branches:
-      - main
-  paths:
-    - ./src
+      - 'main'
+    paths:
+      - '**.js'
 jobs:
   observe_file_changes:
     runs-on: ubuntu-latest
