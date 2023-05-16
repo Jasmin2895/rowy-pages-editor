@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Print modified files
         run: |
           git diff --name-only ${{ github.event.before }} ${{ github.sha }}
       - name: Trigger Webhook
         run: >
           curl -X POST -H "Content-Type: application/json" -d '{"event":
-          "trigger_event"}' <WEBHOOK_ENDPOINT>
+          "push"}' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/YNZnSoeZYgfk9FhCVqDg
