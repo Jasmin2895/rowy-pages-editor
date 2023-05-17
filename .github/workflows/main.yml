@@ -12,4 +12,4 @@ jobs:
       - name: Trigger Webhook
         run: >
           curl -X POST -H "Content-Type: application/json" -d '{"event":
-          "push"}' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/YNZnSoeZYgfk9FhCVqDg
+          "push"}' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
