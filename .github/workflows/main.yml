@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Trigger Webhook
-        run: >
-          curl -X POST -H "Content-Type: application/json" -d '{"event":
-          "push"}' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+      - name: Trigger Rowy webhook
+        uses: rowy/rowy-action@main
+        with:
+          webhook_url: https://rowy.com/webhooks/my-webhook
+          table_name: properties
