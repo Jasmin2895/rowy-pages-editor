@@ -9,21 +9,15 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Rowy Webhook
-        uses: rowy/rowy-action@main
-        with:
-          webhook_url: https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
-          table_name: properties
-          table_data: |
-            [
-              {
-                "column1": "value1",
-                "column2": "value2",
-                "column3": "value3"
-              },
-              {
-                "column1": "value4",
-                "column2": "value5",
-                "column3": "value6"
-              }
-            ]
+      - name: Send Webhook
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '[
+            {
+              "name": "John Doe",
+              "email": "johndoe@example.com"
+            },
+            {
+              "name": "Jane Doe",
+              "email": "janedoe@example.com"
+            }
+          ]' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
