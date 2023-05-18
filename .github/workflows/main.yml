@@ -10,12 +10,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
     
-      - name: Read JSON File
-        id: read_file
-        run: |
-          file_content=$(cat ./src/properties/homeComponent.json)
-          echo "JSON_CONTENT=$file_content" >> $GITHUB_ENV
+      - name: Read file contents
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const fs = require('fs');
+            const fileData = fs.readFileSync('./src/properties/homeComponent.json', 'utf8');
+            core.setOutput('fileContents', fileData);
 
       - name: Send Webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" -d @./src/properties/homeComponent.json https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+          curl -X POST -H "Content-Type: application/json" -d "${{ steps.read_file.outputs.fileContents }}" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
