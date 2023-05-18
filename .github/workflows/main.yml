@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Trigger Rowy webhook
+      - name: Rowy Webhook
         uses: rowy/rowy-action@main
         with:
           webhook_url: https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
-          table_name: properties
+          table_name: my-table
           column_names:
             - name
             - email
