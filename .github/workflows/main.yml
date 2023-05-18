@@ -14,4 +14,4 @@ jobs:
         run: echo "The JSON file data is: $(cat ./src/properties/homeComponent.json)"
 
       - name: Send Webhook
-        run: curl -X POST -H "Content-Type: application/json" -d "$JSON_FILE_DATA" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+        run: curl -X POST -H "Content-Type: application/json" -d $(cat ./src/properties/homeComponent.json) https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
