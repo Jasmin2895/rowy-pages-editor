@@ -18,4 +18,4 @@ jobs:
 
       - name: Send Webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '["${{ steps.read_file.outputs.json_content }}"]' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+          curl -X POST -H "Content-Type: application/json" -d '${{ steps.read_file.outputs.json_content }}' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
