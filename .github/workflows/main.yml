@@ -18,4 +18,5 @@ jobs:
 
       - name: Send Webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" -d "$JSON_CONTENT" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+          payload=$(echo '$JSON_CONTENT' | jq -c .)
+          curl -X POST -H "Content-Type: application/json" -d "${payload}" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
