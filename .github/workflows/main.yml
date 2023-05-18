@@ -12,5 +12,13 @@ jobs:
       - name: Trigger Rowy webhook
         uses: rowy/rowy-action@main
         with:
-          webhook_url: https://rowy.com/webhooks/my-webhook
+          webhook_url: https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
           table_name: properties
+          column_names:
+            - name
+            - email
+          data:
+            - name: John Doe
+              email: johndoe@example.com
+            - name: Jane Doe
+              email: janedoe@example.com
