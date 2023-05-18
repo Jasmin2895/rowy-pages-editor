@@ -9,15 +9,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+
+      - name: Read File
+        id: read_file
+        run: echo "::set-output name=file_content::$(cat ./src/properties/homeComponent.json)"
+
       - name: Send Webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '[
-            {
-              "name": "John Doe",
-              "email": "johndoe@example.com"
-            },
-            {
-              "name": "Jane Doe",
-              "email": "janedoe@example.com"
-            }
-          ]' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+          curl -X POST -H "Content-Type: application/json" -d '${{ steps.read_file.outputs.file_content }}' https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk

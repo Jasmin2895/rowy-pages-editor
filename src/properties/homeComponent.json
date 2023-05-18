@@ -1,0 +1,71 @@
+{
+    "headerTitle": {
+        "text": "My Website"
+    },
+    "headerParagraph": {
+        "text": "Resize the browser window to see the effect."
+    },
+    "navbar-option-1": {
+        "text": "Link"
+    },
+    "navbar-option-2": {
+        "text": "Link"
+    },
+    "navbar-option-3": {
+        "text": "Link"
+    },
+    "navbar-option-4": {
+        "text": "Link"
+    },
+    "card1-h2": {
+        "text": "TITLE HEADING"
+    },
+    "card1-h5": {
+        "text": "Title description, Dec 7, 2017"
+    },
+    "card1-p1": {
+        "text": "Some text.."
+    },
+    "card1-p2": {
+        "text": "Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    "card2-h2": {
+        "text": "TITLE HEADING"
+    },
+    "card2-h5": {
+        "text": "Title description, Dec 7, 2017"
+    },
+    "card2-p1": {
+        "text": "Some text.."
+    },
+    "card2-p2": {
+        "text": "Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    "card3-h2": {
+        "text": "About Me"
+    },
+    "card3-p": {
+        "text": "Some text about me in culpa qui officia deserunt mollit anim."
+    },
+    "card4-h3": {
+        "text": "Popular Post"
+    },
+    "card4-img1": {
+        "text": "Image"
+    },
+    "card4-img2": {
+        "text": "Image"
+    },
+    "card4-img3": {
+        "text": "Image"
+    },
+    "card5-h3": {
+        "text": "Follow Me"
+    },
+    "card5-p": {
+        "text": "Some text.."
+    },
+    "footer-h2": {
+        "text": "Footer"
+    }
+}
