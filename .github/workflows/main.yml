@@ -13,12 +13,17 @@ jobs:
         uses: rowy/rowy-action@main
         with:
           webhook_url: https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
-          table_name: my-table
-          column_names:
-            - name
-            - email
-          data:
-            - name: John Doe
-              email: johndoe@example.com
-            - name: Jane Doe
-              email: janedoe@example.com
+          table_name: properties
+          table_data: |
+            [
+              {
+                "column1": "value1",
+                "column2": "value2",
+                "column3": "value3"
+              },
+              {
+                "column1": "value4",
+                "column2": "value5",
+                "column3": "value6"
+              }
+            ]
