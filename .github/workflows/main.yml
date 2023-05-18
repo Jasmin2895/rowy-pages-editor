@@ -16,6 +16,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const core = require('@actions/core');
             const fileData = fs.readFileSync('./src/properties/homeComponent.json', 'utf8');
             core.setOutput('fileContents', fileData);
 
