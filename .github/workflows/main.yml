@@ -13,7 +13,7 @@ jobs:
       - name: Read file contents
         id: read_file
         run: |
-          fileData=$(cat path/to/file.json)
+          fileData=$(cat ./src/properties/homeComponent.json)
           echo "FILE_DATA=$fileData" >> $GITHUB_ENV
 
       - name: Send data to webhook
