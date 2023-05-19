@@ -13,9 +13,8 @@ jobs:
       - name: Read file contents
         id: read_file
         run: |
-          fileContents=$(cat ./src/properties/homeComponent.json)
-          echo "::set-output name=fileContents::$fileContents"
+          echo "fileData=$(cat path/to/file.json)" >> $GITHUB_ENV
 
       - name: Send data to webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" --data-binary "${{ steps.read_file.outputs.fileContents }}" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+          curl -X POST -H "Content-Type: application/json" --data-binary "${{ env.fileData }}"  https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
