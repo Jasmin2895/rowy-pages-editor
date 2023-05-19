@@ -12,20 +12,10 @@ jobs:
     
       - name: Read file contents
         id: read_file
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const fs = require('fs');
-            const fileData = fs.readFileSync('./src/properties/homeComponent.json', 'utf8');
-            console.log(fileData);
-            console.log(JSON.stringify({ fileContents: fileData }));
-            core.setOutput('fileContents', fileData);
+        run: |
+          fileContents=$(cat path/to/file.json)
+          echo "::set-output name=fileContents::$fileContents"
 
       - name: Send data to webhook
-        uses: actions/workflow-webhook-action@v1
-        with:
-          webhook_url: https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
-          payload: |
-            {
-              "fileData": ${{ toJSON(steps.read_file.outputs.fileContents) }}
-            }
+        run: |
+          curl -X POST -H "Content-Type: application/json" --data-binary "${{ steps.read_file.outputs.fileContents }}" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
