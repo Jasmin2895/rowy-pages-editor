@@ -16,10 +16,10 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const core = require('@actions/core');
             const fileData = fs.readFileSync('./src/properties/homeComponent.json', 'utf8');
+            console.log(fileData);
             core.setOutput('fileContents', fileData);
 
       - name: Send Webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" -d "${{ steps.read_file.outputs.fileContents }}" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
+          curl -X POST -H "Content-Type: application/json" --data-binary @/src/properties/homeComponent.json https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/gXO9N8ebsKTrbZt3JFgk
