@@ -13,7 +13,7 @@ jobs:
       - name: Read file contents
         id: read_file
         run: |
-          fileContents=$(cat .src/properties/homeComponent.json)
+          fileContents=$(cat ./src/properties/homeComponent.json)
           echo "::set-output name=fileContents::$fileContents"
 
       - name: Send data to webhook
