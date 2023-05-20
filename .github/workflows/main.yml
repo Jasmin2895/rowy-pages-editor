@@ -18,4 +18,4 @@ jobs:
 
       - name: Send data to webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" --data-binary "@./src/properties/homeComponent.json" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/properties/WfRm9WNmjusOBXsBJZxv
+          curl -X POST -H "Content-Type: application/json" --data-binary "@./src/properties/homeComponent.json" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/elementsProperties/uKdt4ShpjopswZXNkSnw
