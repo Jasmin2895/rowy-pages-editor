@@ -28,19 +28,19 @@ function Home() {
         </div>
         <div className="topnav">
           {elementProperties['navbar-option-1'] && (
-            <a id="navbar-option-1" style={elementProperties['navbar-option-1'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-1'].text }} href="#" />
+            <a id="navbar-option-1" style={elementProperties['navbar-option-1'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-1'].text }} href="https://www.google.com/" />
           )}
 
           {elementProperties['navbar-option-2'] && (
-            <a id="navbar-option-2" style={elementProperties['navbar-option-2'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-2'].text }} href="#" />
+            <a id="navbar-option-2" style={elementProperties['navbar-option-2'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-2'].text }} href="https://www.google.com/" />
           )}
 
           {elementProperties['navbar-option-3'] && (
-            <a id="navbar-option-3" style={elementProperties['navbar-option-3'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-3'].text }} href="#" />
+            <a id="navbar-option-3" style={elementProperties['navbar-option-3'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-3'].text }} href="https://www.google.com/" />
           )}
 
           {elementProperties['navbar-option-4'] && (
-            <a id="navbar-option-4" style={elementProperties['navbar-option-4'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-4'].text }} href="#" />
+            <a id="navbar-option-4" style={elementProperties['navbar-option-4'].style} dangerouslySetInnerHTML={{ __html: elementProperties['navbar-option-4'].text }} href="https://www.google.com/" />
           )}
 
         </div>
@@ -59,7 +59,7 @@ function Home() {
                 <p>
                   {
                     elementProperties['card1-img1'] && elementProperties['card1-img1'].imageUrl && elementProperties['card1-img1'].imageUrl[0] && (
-                      <img style={{ ...elementProperties['card1-img1'].style, height: "200px", width: "100%" }} src={elementProperties['card1-img1'].imageUrl[0].downloadURL} alt="Image" />
+                      <img style={{ ...elementProperties['card1-img1'].style, height: "200px", width: "100%" }} src={elementProperties['card1-img1'].imageUrl[0].downloadURL} alt="Image1" />
                     )
                   }
                 </p>
@@ -86,7 +86,7 @@ function Home() {
                 <p>
                   {
                     elementProperties['card2-img1'] && elementProperties['card2-img1'].imageUrl && elementProperties['card2-img1'].imageUrl[0] && (
-                      <img style={{ ...elementProperties['card2-img1'].style, height: "200px", width: "100%" }} src={elementProperties['card2-img1'].imageUrl[0].downloadURL} alt="Image" />
+                      <img style={{ ...elementProperties['card2-img1'].style, height: "200px", width: "100%" }} src={elementProperties['card2-img1'].imageUrl[0].downloadURL} alt="Image2" />
                     )
                   }
                 </p>
@@ -110,7 +110,7 @@ function Home() {
                 <p>
                   {
                     elementProperties['card3-img1'] && elementProperties['card3-img1'].imageUrl && elementProperties['card3-img1'].imageUrl[0] && (
-                      <img className="fakeimg" style={{ ...elementProperties['card3-img1'].style }} src={elementProperties['card3-img1'].imageUrl[0].downloadURL} alt="Image" />
+                      <img className="fakeimg" style={{ ...elementProperties['card3-img1'].style }} src={elementProperties['card3-img1'].imageUrl[0].downloadURL} alt="Image3" />
                     )
                   }
                 </p>
@@ -128,7 +128,7 @@ function Home() {
                 <p>
                   {
                     elementProperties['card4-img1'] && elementProperties['card4-img1'].imageUrl && elementProperties['card4-img1'].imageUrl[0] && (
-                      <img className="fakeimg" style={elementProperties['card4-img1'].style} src={elementProperties['card4-img1'].imageUrl[0].downloadURL} alt="Image" />
+                      <img className="fakeimg" style={elementProperties['card4-img1'].style} src={elementProperties['card4-img1'].imageUrl[0].downloadURL} alt="Image4" />
                     )
                   }
                 </p>
@@ -138,7 +138,7 @@ function Home() {
                 <p>
                   {
                     elementProperties['card4-img2'] && elementProperties['card4-img2'].imageUrl && elementProperties['card4-img2'].imageUrl[0] && (
-                      <img className="fakeimg" style={elementProperties['card4-img2'].style} src={elementProperties['card4-img2'].imageUrl[0].downloadURL} alt="Image" />
+                      <img className="fakeimg" style={elementProperties['card4-img2'].style} src={elementProperties['card4-img2'].imageUrl[0].downloadURL} alt="Image5" />
                     )
                   }
 
@@ -149,7 +149,7 @@ function Home() {
                 <p>
                   {
                     elementProperties['card4-img3'] && elementProperties['card4-img3'].imageUrl && elementProperties['card4-img3'].imageUrl[0] && (
-                      <img className="fakeimg" style={elementProperties['card4-img3'].style} src={elementProperties['card4-img3'].imageUrl[0].downloadURL} alt="Image" />
+                      <img className="fakeimg" style={elementProperties['card4-img3'].style} src={elementProperties['card4-img3'].imageUrl[0].downloadURL} alt="Image6" />
                     )
                   }
                 </p>
