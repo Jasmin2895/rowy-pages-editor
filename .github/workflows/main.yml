@@ -1,20 +1,28 @@
-name: Observe Changes in Web Page.
+name: Build Website Builder
+
 on:
   push:
     branches:
-      - 'main'
+      - main
+
 jobs:
-  observe_file_changes:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-    
-      - name: Read file contents
-        id: read_file
-        run: |
-          fileData=$(cat ./src/properties/homeComponent.json)
-          echo "$fileData" > file.json
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Website Builder
+        run: npm run build
 
       - name: Send data to webhook
         run: |
