@@ -18,12 +18,19 @@ jobs:
         with:
           node-version: 14
 
+      - name: Send data to webhook
+        run: |
+          curl -X POST -H "Content-Type: application/json" --data-binary "@./src/properties/homeComponent.json" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/elementsProperties/PTLQPUujMVadrf5EhwVr
+
       - name: Install Dependencies
         run: npm ci
 
       - name: Build Website Builder
         run: npm run build
 
-      - name: Send data to webhook
-        run: |
-          curl -X POST -H "Content-Type: application/json" --data-binary "@./src/properties/homeComponent.json" https://rowy-hooks-fdiwibo4ia-wn.a.run.app/wh/elementsProperties/PTLQPUujMVadrf5EhwVr
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+      
